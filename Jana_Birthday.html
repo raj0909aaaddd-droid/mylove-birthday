@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7dce6">
+<title>For Jana ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--pink:#f4c8d7;--rose:#c66d8b;--deep:#71394f;--cream:#fff9f5;--gold:#d8b36a;--ink:#503543}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 10%,#fff 0,#fff7f5 35%,#f8dfe8 100%);font-family:'DM Sans',sans-serif;color:var(--ink);overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}
+#app{min-height:100vh;display:grid;place-items:center;padding:18px}
+.scene{width:min(100%,520px);min-height:min(790px,calc(100dvh - 36px));position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px 24px 26px;border:1px solid #ffffffc9;border-radius:30px;background:linear-gradient(145deg,#fffdfbfa,#fff6f7f2);box-shadow:0 24px 80px #8b49601c;overflow:hidden}
+.scene:before,.scene:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.scene:before{width:240px;height:240px;background:#f6d8e4;filter:blur(2px);top:-145px;right:-80px}
+.scene:after{width:210px;height:210px;background:#f8e9c9;bottom:-145px;left:-75px}
+.content{position:relative;z-index:1;width:100%;animation:fade .65s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b16d83;font-weight:700}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600;color:#703b51;margin:13px 0}
+h1{font-size:clamp(38px,10vw,58px);line-height:1.08}
+h2{font-size:clamp(29px,7vw,39px)}
+p{line-height:1.7;color:#806574;font-size:14px;max-width:390px;margin:10px auto}
+.primary{background:linear-gradient(135deg,#c66d8b,#9e506f);color:white;padding:14px 24px;border-radius:999px;box-shadow:0 9px 22px #b35c7a38;font-weight:700;margin-top:20px;transition:.2s}
+.primary:active{transform:scale(.96)}
+.soft{background:#fff0f4;color:#99556e;padding:12px 18px;border-radius:999px;font-weight:700;margin:8px}
+.tiny{font-size:12px;color:#b18b99;margin-top:14px}
+.sparkles{font-size:22px;letter-spacing:8px;margin:18px}
+.heart{color:#c66d8b}
+.progress{position:absolute;top:20px;left:24px;right:24px;height:4px;border-radius:9px;background:#f4e6e9;z-index:3}
+.progress span{display:block;height:100%;width:0;background:#c66d8b;border-radius:9px;transition:width .4s}
+.back{position:absolute;top:34px;left:24px;background:#fff0f4;color:#a35e77;border-radius:30px;padding:8px 13px;font-size:12px;z-index:4}
+.hidden{display:none!important}
+/* envelope */
+.envelope-wrap{height:280px;display:grid;place-items:center;margin:18px auto 5px;perspective:900px}
+.envelope{position:relative;width:260px;height:170px;background:#eab8c9;border-radius:8px;box-shadow:0 18px 35px #8e52622c;cursor:pointer}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#f6d7e1,#d88fa9);clip-path:polygon(0 0,50% 58%,100% 0);z-index:3;transform-origin:top;transition:transform .9s ease}
+.envelope:after{content:"";position:absolute;inset:0;background:linear-gradient(35deg,#d88fa9 50%,transparent 50%),linear-gradient(-35deg,#e8b3c5 50%,transparent 50%);clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%);z-index:2}
+.seal{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-20%);width:42px;height:42px;border-radius:50%;background:#bd6c86;color:white;display:grid;place-items:center;box-shadow:0 4px 10px #7c405333;transition:.3s}
+.letter{position:absolute;z-index:1;left:12px;right:12px;bottom:8px;height:145px;background:#fffdf9;border-radius:4px;padding:14px 12px;font-family:'Playfair Display',serif;color:#9b5d72;font-size:14px;transition:transform 1s ease,bottom 1s ease;box-shadow:0 2px 8px #71405222}
+.envelope.open:before{transform:rotateX(180deg);z-index:0}
+.envelope.open .seal{opacity:0;transform:translate(-50%,-20%) scale(.4)}
+.envelope.open .letter{transform:translateY(-125px);bottom:0;transition-delay:.35s}
+.tap{font-size:12px;color:#b18b99}
+/* gift */
+.gift-stage{height:300px;display:grid;place-items:center;perspective:900px;margin:12px auto}
+.gift{width:190px;height:170px;position:relative;cursor:pointer;transform-style:preserve-3d}
+.gift-box{position:absolute;bottom:0;width:190px;height:125px;border-radius:8px;background:linear-gradient(120deg,#d98da6,#bd6382);box-shadow:0 22px 30px #a85b7333}
+.gift-box:before{content:"";position:absolute;left:76px;width:38px;height:100%;background:#f8d995}
+.gift-lid{position:absolute;top:34px;left:-9px;width:208px;height:42px;border-radius:7px;background:linear-gradient(120deg,#edb4c5,#cb7894);z-index:3;transform-origin:left bottom;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.gift-lid:before{content:"";position:absolute;left:85px;width:38px;height:100%;background:#f8d995}
+.bow{position:absolute;z-index:4;top:7px;left:74px;width:44px;height:35px}
+.bow:before,.bow:after{content:"";position:absolute;width:27px;height:23px;border:8px solid #f6d28d;border-radius:80% 80% 10% 80%;transform:rotate(25deg)}
+.bow:after{left:19px;transform:scaleX(-1) rotate(25deg)}
+.gift.open .gift-lid{transform:translate(70px,-110px) rotate(28deg);opacity:.9}
+.gift.open .bow{transform:translate(70px,-110px) rotate(28deg);transition:.9s}
+.gift-note{position:absolute;z-index:1;left:20px;right:20px;bottom:22px;color:#fff9ed;font-family:'Playfair Display',serif;font-size:20px;opacity:0;transform:translateY(20px);transition:1s}
+.gift.open .gift-note{opacity:1;transform:translateY(-65px);transition-delay:.35s}
+.gift.open .gift-box{background:linear-gradient(120deg,#e9b0bf,#d78ca4)}
+/* cards and buttons */
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px auto;max-width:380px}
+.choice{background:#fff1f4;border:1px solid #f5dce4;padding:15px 10px;border-radius:17px;color:#89536a;font-weight:600}
+.choice span{display:block;font-size:25px;margin-bottom:6px}
+.photo{width:100%;height:185px;border-radius:20px;object-fit:cover;margin:12px 0;box-shadow:0 12px 28px #7e4a5b20}
+.letter-text{background:#fffaf6;border:1px solid #f3e2e5;border-radius:20px;padding:22px 20px;text-align:left;line-height:1.85;color:#795b68;font-family:'Playfair Display',serif;font-size:15px;max-height:330px;overflow:auto}
+.signature{font-family:'Playfair Display',serif;color:#b15f7c;font-size:22px;margin-top:16px}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+.confetti i{position:absolute;top:-20px;font-style:normal;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+footer{position:relative;z-index:2;font-size:10px;color:#c39baa;margin-top:20px}
+@media(max-height:700px){.scene{min-height:calc(100dvh - 20px);padding-top:48px;padding-bottom:15px}.envelope-wrap{height:220px}.gift-stage{height:240px}}
+</style>
+</head>
+<body>
+<div id="app"><main class="scene">
+  <div class="progress"><span id="bar"></span></div>
+  <button class="back hidden" id="back" onclick="previous()">← Back</button>
+  <section class="content" id="screen"></section>
+  <footer>made with ♡ by Raj, just for Jana</footer>
+</main></div>
+<div class="confetti" id="confetti"></div>
+<script>
+const screen=document.getElementById('screen'),bar=document.getElementById('bar'),back=document.getElementById('back');
+let step=0,quizScore=0,opened=false;
+const total=6;
+function render(){
+ bar.style.width=(step/(total-1)*100)+'%';back.classList.toggle('hidden',step===0);
+ const pages=[
+ `<div class="eyebrow">a little world made for you</div><div class="sparkles">✧ 🌷 ✧</div><h1>Happy Birthday,<br>Jana ♡</h1><p>Today, this tiny corner of the internet belongs to one very special girl.</p><p>Ready to open your surprise?</p><button class="primary" onclick="next()">Open your birthday surprise ✨</button><div class="tiny">💗 best experienced with sound on</div>`,
+ `<div class="eyebrow">something arrived for you</div><h2>A letter, sealed with love 💌</h2><p>Before the gifts, there's something I want you to read.</p><div class="envelope-wrap"><div class="envelope" id="env" onclick="openLetter()"><div class="letter">To my Jana…<br><br>You make ordinary days feel magical. ♡<br><small>Open me</small></div><div class="seal">♡</div></div></div><div class="tap" id="taptext">Tap the envelope to open it</div><button class="primary hidden" id="letterNext" onclick="next()">Read my letter 💗</button>`,
+ `<div class="eyebrow">a few words from my heart</div><h2>For my favourite person</h2><div class="letter-text">My sweet Jana,<br><br>Happy birthday, my love. I hope today brings you the kind of happiness that stays with you long after the candles are gone. You deserve kindness, peace, laughter, and every beautiful little thing life can offer.<br><br>Even with miles between us, you have a special place in my thoughts. I wish I could be there to celebrate beside you, make you laugh, and see your smile when you open this little surprise.<br><br>Keep being your wonderful self. Never forget how precious you are to me. I’m cheering for every dream you have, today and always.<br><br>Happy birthday, sweetheart. ♡</div><div class="signature">Forever cheering for you — Raj ♡</div><button class="primary" onclick="next()">There's a gift for you 🎁</button>`,
+ `<div class="eyebrow">wrapped with a little magic</div><h2>One more surprise 🎀</h2><p>Go on… unwrap your present.</p><div class="gift-stage"><div class="gift" id="gift" onclick="openGift()"><div class="gift-lid"></div><div class="bow"></div><div class="gift-box"></div><div class="gift-note">A thousand hugs<br>for you, Jana! ♡</div></div></div><div class="tap" id="gifttap">Tap the gift to unwrap it</div><button class="primary hidden" id="giftNext" onclick="next()">What's inside? 🌸</button>`,
+ `<div class="eyebrow">a tiny birthday game</div><h2>How well do you know your surprise? 💞</h2><p>Pick the answer that feels most like us.</p><div class="choice-grid"><button class="choice" onclick="answer(this,false)"><span>🌧️</span>Rainy silence</button><button class="choice" onclick="answer(this,true)"><span>🌸</span>Little happy moments</button><button class="choice" onclick="answer(this,false)"><span>🧊</span>Being serious always</button><button class="choice" onclick="answer(this,false)"><span>📚</span>Endless homework</button></div><p id="quizmsg">There is no wrong way to celebrate you… but try one! 😊</p><button class="primary hidden" id="quizNext" onclick="next()">One last thing 💌</button>`,
+ `<div class="eyebrow">your final birthday surprise</div><div class="sparkles">🌷 💗 🌷</div><h2>Make a wish, Jana</h2><p>May your next chapter be full of beautiful places, kind people, brave dreams, and reasons to smile.</p><div class="choice-grid"><div class="choice"><span>🗻</span>Japan dreams</div><div class="choice"><span>🌸</span>Soft moments</div><div class="choice"><span>✨</span>Big dreams</div><div class="choice"><span>💗</span>All my love</div></div><h2 style="font-size:27px">Happy Birthday, my love! 🎂</h2><p>Distance can keep us apart today, but it can't stop me from celebrating you.</p><button class="primary" onclick="celebrate()">Celebrate again! 🎉</button><div class="tiny">You are loved more than this little website can show. ♡</div>`
+ ];
+ screen.innerHTML=pages[step];screen.style.animation='none';void screen.offsetWidth;screen.style.animation='fade .65s ease';
+}
+function next(){if(step<total-1){step++;render()}}
+function previous(){if(step>0){step--;render()}}
+function openLetter(){if(opened)return;opened=true;document.getElementById('env').classList.add('open');document.getElementById('taptext').textContent='A little note, just for you…';setTimeout(()=>document.getElementById('letterNext').classList.remove('hidden'),900)}
+function openGift(){if(document.getElementById('gift').classList.contains('open'))return;document.getElementById('gift').classList.add('open');document.getElementById('gifttap').textContent='Surprise! A gift full of love 💗';setTimeout(()=>document.getElementById('giftNext').classList.remove('hidden'),900);burst()}
+function answer(el,correct){if(document.querySelector('.choice[disabled]'))return;document.querySelectorAll('.choice').forEach(b=>b.disabled=true);document.getElementById('quizmsg').textContent=correct?'You got it! Our little moments are the sweetest. 💗':'Not quite — the best answer is always the little happy moments. 🌸';document.getElementById('quizNext').classList.remove('hidden')}
+function burst(){const box=document.getElementById('confetti');for(let i=0;i<35;i++){let e=document.createElement('i');e.textContent=['💗','🌸','✨','🎀','💕'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'%';e.style.animationDelay=Math.random()*.8+'s';e.style.fontSize=(14+Math.random()*16)+'px';box.appendChild(e);setTimeout(()=>e.remove(),4500)}}
+function celebrate(){burst();step=0;render()}
+render();
+</script>
+</body></html>
